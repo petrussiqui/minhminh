@@ -30,6 +30,34 @@ export function Hero() {
         .from(".hero-tagline", { opacity: 0, y: 20, duration: 0.5 }, "-=0.2")
         .from(".hero-cta", { opacity: 0, y: 20, stagger: 0.15, duration: 0.5 }, "-=0.2")
         .from(".hero-scroll", { opacity: 0, duration: 0.5 }, "-=0.1");
+
+      // Blob scroll behavior: shrink and move to corner after hero
+      gsap.to(".blob-container", {
+        scrollTrigger: {
+          trigger: "#hero",
+          start: "bottom top",
+          end: "+=300",
+          scrub: 1,
+        },
+        scale: 0.3,
+        x: "30vw",
+        y: "-20vh",
+        opacity: 0.4,
+      });
+
+      // Blob re-expands when Contact section is reached
+      gsap.to(".blob-container", {
+        scrollTrigger: {
+          trigger: "#contact",
+          start: "top 80%",
+          end: "top 20%",
+          scrub: 1,
+        },
+        scale: 0.8,
+        x: "20vw",
+        y: "0vh",
+        opacity: 0.6,
+      });
     }, sectionRef);
 
     return () => ctx.revert();
