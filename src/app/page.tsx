@@ -1,9 +1,23 @@
+import { Navbar } from "@/components/ui/Navbar";
+import { Hero } from "@/components/sections/Hero";
+import { About } from "@/components/sections/About";
+import { Skills } from "@/components/sections/Skills";
+import { Portfolio } from "@/components/sections/Portfolio";
+import { Experience } from "@/components/sections/Experience";
+import { Contact } from "@/components/sections/Contact";
+
 export default function Home() {
   return (
-    <main className="min-h-screen bg-bg-primary">
-      <h1 className="text-text-primary text-4xl font-bold p-8">
-        Quang Minh Portfolio
-      </h1>
-    </main>
+    <>
+      <Navbar />
+      <main>
+        <Hero />
+        <About />
+        <Skills />
+        <Portfolio />
+        <Experience />
+        <Contact />
+      </main>
+    </>
   );
 }
