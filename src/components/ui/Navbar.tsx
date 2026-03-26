@@ -44,14 +44,13 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         <a
           href="#"
-          className="text-xl font-black tracking-tight"
+          className="w-9 h-9 rounded-lg bg-accent flex items-center justify-center text-white text-lg font-black"
           onClick={(e) => {
             e.preventDefault();
             window.scrollTo({ top: 0, behavior: "smooth" });
           }}
         >
-          <span className="text-accent">Q</span>
-          <span className="text-text-primary">M</span>
+          M
         </a>
 
         <div className="hidden md:flex items-center gap-8">
